@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern News Hub</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Modern News Hub</div>
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Stay Informed with Modern News Hub</h1>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search news...">
+                <button id="search-button"><i class="fas fa-search"></i></button>
+            </div>
+            <div class="filters">
+                <select id="category-select">
+                    <option value="">All Categories</option>
+                    <option value="general">General</option>
+                    <option value="business">Business</option>
+                    <option value="technology">Technology</option>
+                    <option value="science">Science</option>
+                    <option value="health">Health</option>
+                    <option value="sports">Sports</option>
+                    <option value="entertainment">Entertainment</option>
+                </select>
+                <select id="language-select">
+                    <option value="en">English</option>
+                    <option value="es">Spanish</option>
+                    <option value="fr">French</option>
+                    <option value="de">German</option>
+                </select>
+            </div>
+        </section>
+
+        <section id="news-container"></section>
+        <div id="loading" class="loading">
+            <div class="spinner"></div>
+            <p>Loading news...</p>
+        </div>
+        <div id="pagination">
+            <button id="prev-button" class="pagination-button" disabled>Previous</button>
+            <span id="page-info"></span>
+            <button id="next-button" class="pagination-button">Next</button>
+        </div>
+
+        <!-- New section for iframe content -->
+        <section id="additional-content">
+            <h2>Weather Forecast</h2>
+            <div class="iframe-container">
+                <iframe src="https://embed.windy.com/embed2.html?lat=45.523&lon=-122.675&zoom=5&level=surface&overlay=wind&menu=&message=&marker=&calendar=&pressure=&type=map&location=coordinates&detail=&detailLat=45.523&detailLon=-122.675&metricWind=default&metricTemp=default&radarRange=-1" frameborder="0"></iframe>
+            </div>
+        </section>
+    </main>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Modern News Hub Made by @ Sameer Yadav</p>
+    </footer>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modal-title"></h2>
+            <p id="modal-date"></p>
+            <p id="modal-description"></p>
+            <div id="modal-content"></div>
+            <p id="modal-source"></p>
+            <div class="interaction-buttons">
+                <button id="like-button"><i class="fas fa-thumbs-up"></i> Like</button>
+                <button id="share-button"><i class="fas fa-share"></i> Share</button>
+            </div>
+            <div id="comments-section">
+                <h3>Comments</h3>
+                <ul id="comments-list"></ul>
+                <form id="comment-form">
+                    <input type="text" id="comment-input" placeholder="Add a comment...">
+                    <button type="submit">Post</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
