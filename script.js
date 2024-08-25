@@ -1,5 +1,5 @@
 // API configuration
-const API_KEY = '70ef59e919302cef4bfdbad53a9fa722';
+const API_KEY = 'd0ae3a6558740d2b980a7db223676e16';
 const API_URL = 'http://api.mediastack.com/v1/news';
 
 // Global variables
